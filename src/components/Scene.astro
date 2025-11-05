@@ -1,0 +1,11 @@
+---
+import { initScene } from '../scripts/scene.js';
+---
+
+<div id="scene-container" style="width:100vw;height:100vh;"></div>
+
+<script type="module" client:load>
+  import { initScene } from './src/scripts/scene.js';
+  const container = document.getElementById('scene-container');
+  initScene(container);
+</script>

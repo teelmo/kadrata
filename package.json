@@ -1,0 +1,17 @@
+{
+  "name": "kadrata",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "astro dev --open",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "push": "git push",
+    "sync-gh-pages": "git subtree push --prefix dist origin gh-pages"
+  },
+  "dependencies": {
+    "astro": "^5.15.3",
+    "three": "^0.181.0"
+  }
+}
