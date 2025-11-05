@@ -1,11 +1,20 @@
 ---
 import { initScene } from '../scripts/scene.js';
+import { initTextScroll } from '../scripts/textScroll.js';
 ---
 
-<div id="scene-container" style="width:100vw;height:100vh;"></div>
+<div class="scene-container"></div>
 
-<script type="module" client:load>
+<div class="text-container">
+  <h2 class="headline">Name of the Company</h2>
+  <div class="body-text"><h3>This is more about what the company does.</h3><h3>And contact info</h3></div>
+</div>
+
+<script type="module">
   import { initScene } from './src/scripts/scene.js';
-  const container = document.getElementById('scene-container');
-  initScene(container);
+  import { initTextScroll } from './src/scripts/textScroll.js';
+
+  const container = document.querySelector('.scene-container');
+  const sceneController = initScene(container); // now returns controller
+  initTextScroll(sceneController); // pass controller instead of plane+textures
 </script>
