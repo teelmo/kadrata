@@ -72,9 +72,9 @@ export function initScene(container) {
     initialCloudStates.length = 0;
     clouds.forEach(cloud => {
       initialCloudStates.push({
+        opacity: cloud.material.opacity,
         position: cloud.position.clone(),
-        scale: cloud.scale.clone(),
-        opacity: cloud.material.opacity
+        scale: cloud.scale.clone()
       });
     });
   }
@@ -90,12 +90,12 @@ export function initScene(container) {
   // Shader material for main plane
   const material = new THREE.ShaderMaterial({
     uniforms: {
+      brightness: { value: 0.8 },
       map1: { value: textures[0] },
       map2: { value: textures[1] },
       mixFactor: { value: 0 },
-      brightness: { value: 0.8 },
-      zoom: { value: zoom },
-      offset: { value: new THREE.Vector2(0, 0) }
+      offset: { value: new THREE.Vector2(0, 0) },
+      zoom: { value: zoom }
     },
     vertexShader: `
       varying vec2 vUv;
