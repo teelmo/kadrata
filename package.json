@@ -1,20 +1,43 @@
 {
   "name": "kadrata",
-  "type": "module",
   "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "astro dev --open",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
+    "build": "webpack --config webpack.prod.js",
     "push": "git push",
-    "sync-gh-pages": "git subtree push --prefix dist origin gh-pages"
-  },
-  "dependencies": {
-    "astro": "^5.15.3",
-    "three": "^0.181.0"
+    "start": "webpack serve --open --config webpack.dev.js",
+    "sync-gh-pages": "git subtree push --prefix dist origin gh-pages",
+    "sync-gh-pages": "git subtree push --prefix public origin gh-pages"
   },
   "devDependencies": {
-    "sass": "^1.93.3"
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.0.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "three": "^0.181.0"
   }
 }

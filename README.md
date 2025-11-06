@@ -8,11 +8,11 @@ Contact Teemo Tebest.
 
 ## How to build and develop
 
-This is an Astro+Vite project.
+This is a Webpack + React project.
 
 * `npm install`
 * `npm run start`
 
-Project should start at: http://localhost:4321
+Project should start at: http://localhost:9000
 
 For developing please refer to `package.json`
