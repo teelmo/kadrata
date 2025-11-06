@@ -28,7 +28,7 @@ export function initTextScroll(sceneController) {
     // === Phase 1 → 2 ===
     sceneController.setPhase(2);
     textContainer.style.transition = 'transform 1.5s ease-out';
-    textContainer.style.transform = 'translate(20%, 70vh)';
+    textContainer.style.transform = 'translate(0, 70vh)';
     await sceneController.transitionTo(1);
 
     // === Phase 2 → 3 === (auto-triggered)
@@ -49,7 +49,7 @@ export function initTextScroll(sceneController) {
     // === Phase 3 → 1 (skip 2) ===
     bodyText.style.opacity = '0';
     textContainer.style.transition = 'transform 1.5s ease-out';
-    textContainer.style.transform = 'translate(20%, 100vh)';
+    textContainer.style.transform = 'translate(0, 100vh)';
     await sceneController.transitionTo(0);
 
     phase = 1;
