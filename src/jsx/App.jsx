@@ -26,9 +26,9 @@ function App() {
 
     // Load main scene images
     const images = [
-      '/assets/img/1.jpg',
-      '/assets/img/2.jpg',
-      '/assets/img/3.jpg'
+      './assets/img/1.jpg',
+      './assets/img/2.jpg',
+      './assets/img/3.jpg'
     ];
 
     const loader = new THREE.TextureLoader();
@@ -43,7 +43,7 @@ function App() {
     const clouds = [];
     let phase = 1;
 
-    loader.load('/assets/img/cloud.png', (cloudTex) => {
+    loader.load('./assets/img/cloud.png', (cloudTex) => {
       for (let i = 0; i < cloudCount; i++) {
         const cloudMat = new THREE.SpriteMaterial({
           map: cloudTex,
