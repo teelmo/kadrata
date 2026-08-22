@@ -1,7 +1,5 @@
-import React, {
-  useEffect
-} from 'react';
-import '../styles/styles.less';
+import { useEffect } from 'react';
+import '../styles/styles.css';
 
 // src/scripts/scene.js
 import * as THREE from 'three';
