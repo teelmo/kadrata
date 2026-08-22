@@ -1,18 +1,34 @@
-# Kadrata
+# kadrata
 
-**Live demo** https://teelmo.github.io/kadrata
+A three.js WebGL landing-page concept: a cross-fading background scene with drifting cloud sprites, revealing a headline and body text on scroll.
 
-## Rights of usage
+**Live**: https://teelmo.github.io/kadrata
 
-Contact Teemo Tebest.
+## Tech stack
 
-## How to build and develop
+- [Vite](https://vitejs.dev/) + React 19
+- [Biome](https://biomejs.dev/) for formatting/linting
+- [@teelmo/web-styles](https://github.com/teelmo/web-tools) for the shared CSS reset/basics
+- [three.js](https://threejs.org/) for the WebGL scene, driven directly in `src/jsx/App.jsx` (custom shader material, sprite-based clouds, scroll-triggered scene transitions)
 
-This is a Webpack + React project.
+## Development
 
-* `npm install`
-* `npm run start`
+```
+npm install
+npm start
+```
 
-Project should start at: http://localhost:9000
+Opens at http://localhost:8080.
 
-For developing please refer to `package.json`
+## Build
+
+```
+npm run build
+```
+
+## Deploy
+
+```
+npm run push            # push to GitHub
+npm run sync-gh-pages   # publish dist/ to the gh-pages branch
+```

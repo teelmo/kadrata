@@ -10,11 +10,12 @@
     "format": "biome format --write src",
     "lint:fix": "biome check --write src",
     "push": "git push",
-    "sync-gh-pages": "git subtree push --prefix dist origin gh-pages"
+    "sync-gh-pages": "gh-pages -d dist"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.14",
     "@vitejs/plugin-react": "^6.0.1",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "terser": "^5.0.0",
